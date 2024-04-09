@@ -53,7 +53,7 @@ article figure>img {
 #map { 
     width: 90%;
     height: 600px;
-    border: 1px solid lightseagreen
+    border: 1px solid lightseagreen;
     margin: auto;
 }
 
