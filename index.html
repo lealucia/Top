@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<head>
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-
-    
+ib<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Lieblinsorte</title>
 
-    <!-- Favicon einfügen-->
+    <!-- Vorschaubild für Tab-->
     <link rel="shortcut icon" href="images/user.jpg" type="image/x-icon">
 
-    <!-- Leaflet -->
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <!-- Leaflet Bibliothek -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Stil und Skript -->
 
-  <script defer src="main.js">
+    <link rel="stylesheet" href="main.css">
 
-  </script>
-
+    <script defer src="main.js"> </script>
 </head>
 
 <body>
@@ -38,6 +34,7 @@
         <!--user:https://pixabay.com/de/photos/robbe-kegelrobbe-helgoland-d%C3%BCne-3080472/ -->
         <a href="https://github.com/webmapping/nz"><img src="images/user.jpg" alt="Robbengesicht"></a>
     </header>
+
     <main>
         <article>
             <h1>Lieblingsorte</h1>
@@ -63,6 +60,7 @@
             <p>Quelle: <a href="https://de.wikipedia.org/wiki/Bamberg">Wikipedia</a></p>
 
             <h3>Klein Venedig</h3>
+
             <figure>
                 <img src="images/attraction.jpg" alt="Bild auf Klein Venedig mit Boot auf der Regnitz">
                 <figcaption>Blick auf Klein Venedig (Quelle: <a
@@ -73,44 +71,37 @@
             <!-- Hier  die Karte rein-->
 
             <h3>Übersichtskarte</h3>
-            <div id="map" style="width:90%; height:600px;"></div>
+            <div id="map"></div>
 
             <h3>Links</h3>
             <ul>
-                <li> <a
-                        href="https://www.getyourguide.de/-l2537/?cmp=bing&cmp=bing&ad_id=77653201340679&adgroup_id=1242448749747120&bid_match_type=be&campaign_id=434041392&device=c&feed_item_id=&keyword=sehensw%C3%BCrdigkeiten%20bamberg&loc_interest_ms=120127&loc_physical_ms=146440&match_type=e&msclkid=df8ad493c5b919d36d57b160e29c80d5&network=o&partner_id=CD951&target_id=kwd-77653388178857&utm_adgroup=lc%3D2537%3Abamberg%7Cfn%3Df3%7Cci%3D937%3Athings%20to%20do&utm_campaign=dc%3D27%3Ade%7Clc%3D2537%3Abamberg%7Cct%3Dcore%7Cln%3D39%3Ade%7Ctc%3Dall&utm_keyword=sehensw%C3%BCrdigkeiten%20bamberg&utm_medium=paid_search&utm_query=sehensw%C3%BCrdigkeiten%20bamberg&utm_source=bing">Liste
+                <li> <a href="https://www.getyourguide.de/-l2537/?cmp=bing&cmp=bing&ad_id=77653201340679&adgroup_id=1242448749747120&bid_match_type=be&campaign_id=434041392&device=c&feed_item_id=&keyword=sehensw%C3%BCrdigkeiten%20bamberg&loc_interest_ms=120127&loc_physical_ms=146440&match_type=e&msclkid=df8ad493c5b919d36d57b160e29c80d5&network=o&partner_id=CD951&target_id=kwd-77653388178857&utm_adgroup=lc%3D2537%3Abamberg%7Cfn%3Df3%7Cci%3D937%3Athings%20to%20do&utm_campaign=dc%3D27%3Ade%7Clc%3D2537%3Abamberg%7Cct%3Dcore%7Cln%3D39%3Ade%7Ctc%3Dall&utm_keyword=sehensw%C3%BCrdigkeiten%20bamberg&utm_medium=paid_search&utm_query=sehensw%C3%BCrdigkeiten%20bamberg&utm_source=bing">Liste
                         der Sehenswürdigkeiten in Bamberg</a></li>
-                <li> <a
-                        href="https://www.booking.com/city/de/bamberg.de.html?aid=349015&pagename=city-bamberg&label=msn-up5A9rCfg3Z9PdCx1VcFLg-79920924824950:tikwd-79921078409586:loc-10:neo:mte:lp146440:dec:qs%20bamberg&utm_campaign=Germany&utm_medium=cpc&utm_source=bing&utm_term=up5A9rCfg3Z9PdCx1VcFLg&msclkid=1b75598e19a31f0a95083c7d3ece83e5&utm_content=Bamberg%20-%20UFI%3A-1743608">Hotels
+                <li> <a href="https://www.booking.com/city/de/bamberg.de.html?aid=349015&pagename=city-bamberg&label=msn-up5A9rCfg3Z9PdCx1VcFLg-79920924824950:tikwd-79921078409586:loc-10:neo:mte:lp146440:dec:qs%20bamberg&utm_campaign=Germany&utm_medium=cpc&utm_source=bing&utm_term=up5A9rCfg3Z9PdCx1VcFLg&msclkid=1b75598e19a31f0a95083c7d3ece83e5&utm_content=Bamberg%20-%20UFI%3A-1743608">Hotels
                         in Bamberg </a></li>
                 <li> <a href="https://www.bamberg.info/">
                         Touristen Information Bamberg</a></li>
             </ul>
-
         </article>
-        <footer>
-            <nav>
-                <a href="https://laurent2997.github.io/top/"><i class="fa-solid fa-arrow-left"></i> vorhergehende Etappe</a>
-                <a href="https://lealucia.github.io/top/">diese Etappe</a>
-                <a href="https://danielwebmap.github.io/top/">erste Etappe <i class="fa-solid fa-arrow-right"></i></a>
-            </nav>
-        </footer>
     </main>
-    <!-- hier müssen noch wichtige Daten für die Karte definiert werden-->
-    <script>
-        var map = L.map('map').setView([49.891667, 10.891667], 13); L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
+
+    <footer>
+        <nav>
+            <a href="https://laurent2997.github.io/top/"><i class="fa-solid fa-arrow-left"></i> vorhergehende Etappe</a>
+            <a href="https://lealucia.github.io/top/">diese Etappe</a>
+            <a href="https://danielwebmap.github.io/top/">erste Etappe <i class="fa-solid fa-arrow-right"></i></a>
+        </nav>
+    </footer>
+    var map = L.map('map').setView([49.891667, 10.891667], 13); L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
 
 
-        var marker = L.marker([49.891667, 10.891667], 13).addTo(map);
-
-        marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+    var marker = L.marker([49.891667, 10.891667], 13).addTo(map);
+    marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
         circle.bindPopup("I am a circle.");
         polygon.bindPopup("I am a polygon.");
 
-    </script>
 </body>
-
 </html>
