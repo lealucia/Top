@@ -9,11 +9,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-
-let marker = L.Marker([lat, lng]).addTo(map);
-marker.bindPopup("<b> Bamberg </b><br> Highlights <br>").openPopup();
-
-
 L.control.scale({ imperial: false, maxWidth: 150 }).addTo(map);
 
 let jsonData = {
