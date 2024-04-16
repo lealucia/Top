@@ -2,7 +2,11 @@ let lat = 49.891667;
 let lng = 10.891667;
 let zoom = 13;
 
-let map = L.map('map').setView([lat, lng], zoom);
+let map = L.map('map', {
+    center: [lat, lng],
+    zoom: zoom
+}
+);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -258,7 +262,7 @@ let jsonData = {
 }
 
 L.geoJSON(jsonData, {}).bindPopup(function (layer) {
-    console.log(layer.feature.properties)
+    
     return `
         <h2>${layer.feature.properties.name}</h2>
         <ul>
