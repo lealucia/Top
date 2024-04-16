@@ -10,14 +10,11 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-var marker = L.Marker([lat, lng]).addTo(map);
+let marker = L.Marker([lat, lng]).addTo(map);
 marker.bindPopup("<b> Bamberg </b><br> Highlights <br>").openPopup();
 
 
-L.control.scale({
-    imperial: false,
-    maxWidth: 150 
-}).addTo(map);
+L.control.scale({ imperial: false, maxWidth: 150 }).addTo(map);
 
 let jsonData = {
     "type": "FeatureCollection",
@@ -265,17 +262,15 @@ let jsonData = {
     ]
 }
 
-L.geoJSON(jsondata, {}).bindPopup(function (layer) {
+L.geoJSON(jsonData, {}).bindPopup(function (layer) {
     console.log(layer.feature.properties)
-
-
     return `
-    <h2>${layer.feature.properties.name}</h2>
-    <ul>
-    <li><b>Breite: ${layer.feature.geometry.coordinates[1].toFixed(5)}</b></li>
-    <li><b>Länge: ${layer.feature.geometry.coordinates[0].toFixed(5)}</b></li>
-    <li><a href="${layer.feature.properties.wikipedia}">Wikipedia</a></li>
-    <li><a href="https://${layer.feature.properties.user}.github.io/top/">User-Website</a></li>
-</ul>`;
+        <h2>${layer.feature.properties.name}</h2>
+        <ul>
+            <li>Breite: ${layer.feature.geometry.coordinates[1].toFixed(5)}</li>
+            <li>Länge: ${layer.feature.geometry.coordinates[0].toFixed(5)}</li>
+            <li><a href="${layer.feature.properties.wikipedia}">Wikipedia</a></li>
+            <li><a href="https://${layer.feature.properties.user}.github.io/top/">User-Website</a></li>
+    </ul>`;
     
 }).addTo(map);
